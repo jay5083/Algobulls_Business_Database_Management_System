@@ -36,7 +36,7 @@ def add_dashboard(request):
         Dashboard.objects.create(owner=request.user, clientid=clientid, name=name,
                                   contact=contact, category=category)
         messages.success(request, 'Dashboard saved successfully')
-        return redirect('dashboard:index')  # Redirect to dashboard index page
+        return redirect('dashboard')  # Redirect to dashboard index page
 
     if request.method == 'GET':
         return render(request, 'dashboard/add-dashboard.html', {'categories': categories})
