@@ -1,0 +1,1 @@
+web: gunicorn algobulls_bdms.wsgi
